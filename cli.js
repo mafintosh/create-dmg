@@ -107,7 +107,7 @@ async function init() {
 	if (hasAppIcon) {
 		ora.text = 'Creating icon';
 		const appIconName = appInfo.CFBundleIconFile.replace(/\.icns/, '');
-		composedIconPath = await composeIcon(path.join(appPath, 'Contents/Resources', `${appIconName}.icns`));
+		composedIconPath = await composeIcon(path.join(appPath, 'Contents/Resources', `${appIconName}.png`));
 	}
 
 	const dmgFormat = 'ULFO'; // ULFO requires macOS 10.11+
